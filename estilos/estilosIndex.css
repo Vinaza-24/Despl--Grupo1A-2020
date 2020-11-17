@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#btn-menu{
+    display: none;
+}
+
+header label{
+    display: none;
+    width: 90px;
+    height: 85px;
+    padding: 10px;
+
+}
+
+header label:hover{
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+}
+
+
+.header{
+    width: 100%;
+    display: flex;
+    background: #4669F9;
+}
+
+
+.logo{
+    width: 50%;
+}
+
+.nav{
+    width: 50%;
+    margin: auto;
+}
+
+.nav ul{
+    display: flex;
+    justify-content:flex-end;
+    list-style: none;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    color: black;
+    font-size: 1.5em;
+    text-shadow: 1px 1px #fff;
+}
+
+.logo img{
+    max-width: 75px;
+}
+
+.nav ul li{
+    padding: 15px;
+    margin-right: 45px;
+}
+
+@media (max-width:988px){
+    header label{
+        display: block;
+        width: 100%;
+    }
+    
+    .nav{
+        position: absolute;
+        width: 70%;
+        margin-left: -70%;
+        margin-top: 85px;
+        background: #4669F9;
+        transition: all 0.5s;
+    }
+    
+    .nav ul{
+        flex-direction: column;
+    }
+    
+    .nav li{
+        border-top: 2px solid black;
+    }
+    
+    #btn-menu:checked ~ .nav{
+        margin: 85px 0px;
+    }
+    
+}
